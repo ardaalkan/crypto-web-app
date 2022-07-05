@@ -1,0 +1,30 @@
+.dark {
+  --color-primary: #2d3748;
+  --color-secondary: #283141;
+  --color-text-primary: #dbdbdb;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #81e6d9;
+  --color-input: #4a5361;
+  --color-button: #81e6d9;
+}
+
+.light {
+  --color-primary: #ffffff;
+  --color-secondary: #edf2f7;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #4a5568;
+  --color-text-accent: #2b6cb0;
+  --color-input: #edf2f7;
+  --color-button: #2b6cb0;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+.rounded-div {
+  width: 75%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}

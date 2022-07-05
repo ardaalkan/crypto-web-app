@@ -1,0 +1,10 @@
+.ThemeToggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.themeIcons {
+  color: var(--color-text-primary);
+  margin-right: 5px;
+}
