@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import styles from "./Navbar.module.css";
 
