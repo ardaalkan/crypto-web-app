@@ -1,0 +1,10 @@
+.coin_image_container {
+  display: flex;
+  align-items: center;
+}
+
+.coin_images {
+  width: 3rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+}

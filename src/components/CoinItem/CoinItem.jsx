@@ -1,17 +1,18 @@
 import React from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { Sparklines, SparklinesLine } from "react-sparklines";
+import styles from "../CoinItem/CoinItem.module.css";
 
-const CoinItem = ({coin}) => {
+const CoinItem = ({ coin }) => {
   return (
-    <tr >
+    <tr className={styles.coin_tr_top_border}>
       <td>
         <AiOutlineStar />
       </td>
       <td>{coin.market_cap_rank}</td>
       <td>
-        <div>
-          <img src={coin.image} alt={coin.id} />
+        <div className={styles.coin_image_container}>
+          <img className={styles.coin_images} src={coin.image} alt={coin.id} />
           <p>{coin.name}</p>
         </div>
       </td>

@@ -19,7 +19,7 @@ const CoinSearch = ({ coins }) => {
       </div>
 
       <div className={styles.coin_table_container}>
-        <table>
+        <table className={styles.coin_table}>
           <thead>
             <tr className={styles.coin_table_row}>
               <th></th>
