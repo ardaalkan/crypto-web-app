@@ -7,7 +7,8 @@
   --color-input: #4a5361;
   --color-button: #81e6d9;
   --color-placeholder: #dbdbdb;
-  --color-tr-holder:rgb(100, 100, 100);
+  --color-tr-holder: #364257;
+  --color-sparkline: #9c8bff;
 }
 
 .light {
@@ -19,7 +20,8 @@
   --color-input: #edf2f7;
   --color-button: #2b6cb0;
   --color-placeholder: #24568b;
-  --color-tr-holder:rgb(216, 216, 216);
+  --color-tr-holder: rgb(226, 226, 226);
+  --color-sparkline: #1b7eff;
 }
 
 body {

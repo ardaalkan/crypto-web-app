@@ -8,3 +8,14 @@
   margin-right: 2rem;
   border-radius: 50%;
 }
+
+.price_change_color{
+  color: rgb(1, 199, 1);
+  font-weight: 500;
+}
+
+.price_change_lower_color{
+  color: rgb(255, 66, 66);
+  font-weight: 500;
+}
+

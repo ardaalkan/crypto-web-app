@@ -1,12 +1,14 @@
-import React from 'react'
-import CoinSearch from '../components/CoinSearch/CoinSearch'
+import React from "react";
+import CoinSearch from "../components/CoinSearch/CoinSearch";
+import Trending from "../components/Trending/Trending";
 
-const Home = ({coins}) => {
+const Home = ({ coins }) => {
   return (
     <div>
-      <CoinSearch coins={coins}/>
+      <CoinSearch coins={coins} />
+      <Trending />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
