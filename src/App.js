@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./routes/Home";
 import SignInPage from "./routes/SignInPage";
 import SignUpPage from "./routes/SignUpPage";
+import CoinPage from "./routes/CoinPage";
 import Account from "./routes/Account";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -29,6 +30,9 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/coin/:coinId" element={<CoinPage />}>
+          <Route path=":coinId" />
+        </Route>
       </Routes>
     </ThemeProvider>
   );

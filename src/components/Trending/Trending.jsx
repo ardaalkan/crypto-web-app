@@ -18,8 +18,8 @@ const Trending = () => {
     <div className={styles.trending_main}>
       <h1 className={styles.trending_coins_text}>Trending Coins</h1>
       <div className={styles.trending_grid_style}>
-        {trending.map((coin) => (
-          <div className={styles.trending_container}>
+        {trending.map((coin, idx) => (
+          <div key={idx} className={styles.trending_container}>
             <div className={styles.trending_container_style}>
               <div className={styles.trending_image_container}>
                 <img
