@@ -1,0 +1,76 @@
+.trending_main {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  color: var(--color-text-primary);
+}
+
+.trending_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.static_trending_btc_img_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.static_trending_btc_img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+}
+
+.trending_item_small {
+  width: 80px;
+  height: 80px;
+}
+
+.trending_coins_text {
+  font-size: larger;
+  padding-top: 1rem;
+  width: 75%;
+  margin: auto;
+}
+
+.trending_grid_style {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  width: 75%;
+  margin: auto;
+}
+
+.trending_container {
+  background-color: var(--color-bg-trending-container);
+  box-shadow: rgba(48, 48, 48, 0.35) 0px 5px 15px;
+}
+
+.trending_container:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out;
+  transition-duration: 300ms;
+}
+
+.trending_container_style {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trending_image_container {
+  display: flex;
+}
+
+.trending_coin_item_name {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.trending_coin_item_symbol {
+  font-weight: bold;
+  margin-left: 1rem;
+}
