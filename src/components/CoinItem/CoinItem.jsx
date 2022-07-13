@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import styles from "../CoinItem/CoinItem.module.css";
+import { Link } from "react-router-dom";
 
 const CoinItem = ({ coin }) => {
   return (
@@ -11,10 +12,16 @@ const CoinItem = ({ coin }) => {
       </td>
       <td>{coin.market_cap_rank}</td>
       <td>
-        <div className={styles.coin_image_container}>
-          <img className={styles.coin_images} src={coin.image} alt={coin.id} />
-          <p>{coin.name}</p>
-        </div>
+        <Link to={`/coin/${coin.id}`}>
+          <div className={styles.coin_image_container}>
+            <img
+              className={styles.coin_images}
+              src={coin.image}
+              alt={coin.id}
+            />
+            <p>{coin.name}</p>
+          </div>
+        </Link>
       </td>
       <td>{coin.symbol.toUpperCase()}</td>
       <td>${coin.current_price}</td>

@@ -7,7 +7,6 @@
   margin-top: 3rem;
   display: flex;
   color: var(--color-text-primary);
-
 }
 
 .coin_page_main_stats {
@@ -43,40 +42,40 @@
   font-weight: bold;
 }
 
-.market_cap_container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
-    color: var(--color-text-primary);
-    font-size: 1rem;
+.market_cap_container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  color: var(--color-text-primary);
+  font-size: 1rem;
 }
 
-.market_stats_text{
-    font-weight: bold;
+.market_stats_text {
+  font-weight: bold;
 }
 
-.market_stats_container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
-    padding-right: 0.5rem;
+.market_stats_container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-right: 0.5rem;
 }
 
 .market_stats_container p {
-    font-size: 0.875rem;
+  font-size: 0.875rem;
 }
 
-.coin_page_social_icons{
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
-    color: var(--color-text-primary);
+.coin_page_social_icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  color: var(--color-text-primary);
 }
 
-.coin_page_description{
-    padding-top: 1rem;
+.coin_page_description {
+  padding-top: 1rem;
 }
 
-.coin_page_description_coin_name{
-    font-weight: bold;
+.coin_page_description_coin_name {
+  font-weight: bold;
 }
