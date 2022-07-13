@@ -1,0 +1,82 @@
+.coin_page_container {
+  border-radius: 10px;
+  width: 75%;
+  box-shadow: var(--color-secondary) 0px 1px 2px 0px,
+    var(--color-secondary) 0px 1px 3px 1px;
+  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  color: var(--color-text-primary);
+
+}
+
+.coin_page_main_stats {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.coin_page_main_stats_img {
+  width: 5rem;
+  margin-right: 2rem;
+}
+
+.coin_page_text_name {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.coin_page_stats {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .coin_page_stats {
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+}
+
+.market_data_current_price {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+}
+
+.market_cap_container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+}
+
+.market_stats_text{
+    font-weight: bold;
+}
+
+.market_stats_container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-right: 0.5rem;
+}
+
+.market_stats_container p {
+    font-size: 0.875rem;
+}
+
+.coin_page_social_icons{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    color: var(--color-text-primary);
+}
+
+.coin_page_description{
+    padding-top: 1rem;
+}
+
+.coin_page_description_coin_name{
+    font-weight: bold;
+}

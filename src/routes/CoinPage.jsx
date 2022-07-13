@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Sparklines, SparklinesLine } from "react-sparklines";
-import {
-  FaTwitter,
-  FaFacebook,
-  FaReddit,
-  FaGithub,
-  FaGit,
-} from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaReddit, FaGithub } from "react-icons/fa";
 import DOMPurify from "dompurify";
+import styles from "./CoinPage.module.css";
 
 const CoinPage = () => {
   const [coin, setCoin] = useState({});
@@ -24,20 +19,26 @@ const CoinPage = () => {
   }, [url]);
 
   return (
-    <div>
-      <div>
-        <img src={coin.image?.large} alt="" />
+    <div className={styles.coin_page_container}>
+      <div className={styles.coin_page_main_stats}>
+        <img
+          className={styles.coin_page_main_stats_img}
+          src={coin.image?.large}
+          alt=""
+        />
         <div>
-          <p>{coin?.name} price</p>
+          <p className={styles.coin_page_text_name}>{coin?.name} price</p>
           <p>({coin.symbol?.toUpperCase()} / USD)</p>
         </div>
       </div>
 
-      <div>
+      <div className={styles.coin_page_stats}>
         <div>
-          <div>
+          <div className={styles.coin_7d_stats}>
             {coin.market_data?.current_price ? (
-              <p>${coin.market_data.current_price.usd.toLocaleString()}</p>
+              <p className={styles.market_data_current_price}>
+                ${coin.market_data.current_price.usd.toLocaleString()}
+              </p>
             ) : null}
             <p>7 Day</p>
           </div>
@@ -46,7 +47,7 @@ const CoinPage = () => {
               <SparklinesLine color="var(--color-sparkline)" />
             </Sparklines>
           </div>
-          <div>
+          <div className={styles.market_cap_container}>
             <div>
               <p>Market Cap</p>
               {coin.market_data?.market_cap ? (
@@ -60,7 +61,7 @@ const CoinPage = () => {
               ) : null}
             </div>
           </div>
-          <div>
+          <div className={styles.market_stats_container}>
             <div>
               <p>24h High</p>
               {coin.market_data?.high_24h ? (
@@ -77,8 +78,8 @@ const CoinPage = () => {
         </div>
 
         <div>
-          <p>Market Stats</p>
-          <div>
+          <p className={styles.market_stats_text}>Market Stats</p>
+          <div className={styles.market_stats_container}>
             <div>
               <p>Market Rank</p>
               {coin.market_cap_rank}
@@ -92,7 +93,7 @@ const CoinPage = () => {
               {coin.tickers ? <p>{coin.liquidity_score.toFixed(2)}</p> : null}
             </div>
           </div>
-          <div>
+          <div className={styles.market_stats_container}>
             <div>
               <p>Price Change (24h)</p>
               {coin.market_data ? (
@@ -115,7 +116,8 @@ const CoinPage = () => {
                 </p>
               ) : null}
             </div>
-            <div>
+          </div>
+          <div className={styles.market_stats_container}>
               <div>
                 <p>Price Change (30d)</p>
                 {coin.market_data ? (
@@ -141,16 +143,15 @@ const CoinPage = () => {
                 ) : null}
               </div>
             </div>
-            <div>
-              <FaTwitter />
-              <FaFacebook />
-              <FaReddit />
-              <FaGithub />
-            </div>
+          <div className={styles.coin_page_social_icons}>
+            <FaTwitter />
+            <FaFacebook />
+            <FaReddit />
+            <FaGithub />
           </div>
         </div>
-        <div>
-          <p>About {coin.name}</p>
+        <div className={styles.coin_page_description}>
+          <p className={styles.coin_page_description_coin_name}>About {coin.name}</p>
           <p
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(
