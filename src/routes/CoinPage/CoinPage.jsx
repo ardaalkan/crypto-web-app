@@ -8,10 +8,9 @@ import { useParams } from "react-router-dom";
 
 const CoinPage = () => {
   const [coin, setCoin] = useState({});
-  const params = useParams()
+  const params = useParams();
 
-  const url =
-    `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`;
+  const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}?localization=false&sparkline=true`;
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -120,31 +119,29 @@ const CoinPage = () => {
             </div>
           </div>
           <div className={styles.market_stats_container}>
-              <div>
-                <p>Price Change (30d)</p>
-                {coin.market_data ? (
-                  <p>
-                    {coin.market_data.price_change_percentage_30d.toFixed(2)}%
-                  </p>
-                ) : null}
-              </div>
-              <div>
-                <p>Price Change (60d)</p>
-                {coin.market_data ? (
-                  <p>
-                    {coin.market_data.price_change_percentage_60d.toFixed(2)}%
-                  </p>
-                ) : null}
-              </div>
-              <div>
-                <p>Price Change (1y)</p>
-                {coin.market_data ? (
-                  <p>
-                    {coin.market_data.price_change_percentage_1y.toFixed(2)}%
-                  </p>
-                ) : null}
-              </div>
+            <div>
+              <p>Price Change (30d)</p>
+              {coin.market_data ? (
+                <p>
+                  {coin.market_data.price_change_percentage_30d.toFixed(2)}%
+                </p>
+              ) : null}
             </div>
+            <div>
+              <p>Price Change (60d)</p>
+              {coin.market_data ? (
+                <p>
+                  {coin.market_data.price_change_percentage_60d.toFixed(2)}%
+                </p>
+              ) : null}
+            </div>
+            <div>
+              <p>Price Change (1y)</p>
+              {coin.market_data ? (
+                <p>{coin.market_data.price_change_percentage_1y.toFixed(2)}%</p>
+              ) : null}
+            </div>
+          </div>
           <div className={styles.coin_page_social_icons}>
             <FaTwitter />
             <FaFacebook />
@@ -153,7 +150,9 @@ const CoinPage = () => {
           </div>
         </div>
         <div className={styles.coin_page_description}>
-          <p className={styles.coin_page_description_coin_name}>About {coin.name}</p>
+          <p className={styles.coin_page_description_coin_name}>
+            About {coin.name}
+          </p>
           <p
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(
