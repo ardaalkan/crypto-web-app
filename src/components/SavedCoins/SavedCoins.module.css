@@ -1,0 +1,46 @@
+.table_container {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table_container_row {
+  border-bottom-width: 1px;
+}
+
+.table_container_head {
+  text-align: left;
+}
+
+.tbody_row {
+  overflow: hidden;
+}
+
+.saved_coin_container {
+  display: flex;
+  align-items: center;
+}
+
+.saved_coin_container_image {
+  width: 2rem;
+}
+
+.saved_coin_name {
+  display: table;
+}
+
+.saved_coin_symbol {
+  color: gray;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .saved_coin_symbol {
+    display: table;
+  }
+}
+
+.ai_close_icon {
+  cursor: pointer;
+}

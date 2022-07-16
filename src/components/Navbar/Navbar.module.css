@@ -96,13 +96,13 @@
   position: fixed;
   left: 0;
   top: 50px;
-  background-color: var(--color-primary);
   transition-timing-function: ease-in;
   transition-duration: 300ms;
   z-index: 10;
 }
 
 .mobile_menu_container_toggle {
+  background-color: red;
   display: fixed;
   flex-direction: column;
   align-items: center;
@@ -112,7 +112,6 @@
   position: fixed;
   left: -100%;
   top: 50px;
-  background-color: var(--color-primary);
   transition-timing-function: ease-in;
   transition-duration: 200ms;
   z-index: 10;

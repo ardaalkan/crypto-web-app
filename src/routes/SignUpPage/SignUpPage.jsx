@@ -1,13 +1,13 @@
 import React from "react";
 import { AiFillLock, AiOutlineMail } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import styles from "./SignInPage.module.css";
+import styles from "./SignUpPage.module.css";
 
-const SignInPage = () => {
+const SignUpPage = () => {
   return (
     <div>
-      <div className={styles.sign_in_page_container}>
-        <h1 className={styles.sign_in_page_h1}>Sign In</h1>
+      <div className={styles.sign_up_page_container}>
+        <h1 className={styles.sign_up_page_h1}>Sign Up</h1>
         <form>
           <div className={styles.input_container}>
             <label>Email</label>
@@ -23,11 +23,11 @@ const SignInPage = () => {
               <input type="password" />
             </div>
           </div>
-          <button className={styles.signin_button}>Sign In</button>
+          <button className={styles.sign_up_button}>Sign Up</button>
         </form>
-        <p className={styles.p_sign_in}>
-          Don't have an account?
-          <Link className={styles.p_sign_in_linkTag} to="/signup">
+        <p className={styles.p_signup}>
+          Already have an account?
+          <Link className={styles.p_signup_linkTag} to="/signin">
             Sign Up{" "}
           </Link>
         </p>
@@ -36,4 +36,4 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default SignUpPage;

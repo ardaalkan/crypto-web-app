@@ -1,0 +1,69 @@
+.account_container {
+  width: 75%;
+  margin: auto;
+}
+
+.account_containe_user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0rem 3rem 0rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 10px;
+  color: var(--color-text-primary);
+}
+
+.account_container_h1 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+  margin-left: 1rem;
+}
+
+.welcome_user {
+  font-size: 1rem; /* 24px */
+  line-height: 1.5rem; /* 32px */
+  margin-left: 1rem;
+}
+
+.sign_out_button {
+  padding: 1.2rem;
+  background-color: var(--color-button);
+  color: var(--color-secondary);
+  font-weight: bold;
+  border: none;
+  box-shadow: rgba(39, 39, 39, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+
+.sign_out_button:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+.saved_coins_lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  color: var(--color-text-primary);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 10px;
+}
+
+.saved_coins_list {
+  width: 100%;
+  min-height: 300px;
+  padding-left: 1rem;
+}
+
+.saved_coins_h1 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+  font-weight: bold;
+}
