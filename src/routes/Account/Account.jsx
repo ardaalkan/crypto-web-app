@@ -19,7 +19,7 @@ const Account = () => {
       <div className={styles.saved_coins_lists}>
         <div className={styles.saved_coins_list}>
           <h1 className={styles.saved_coins_h1}>Saved Coins</h1>
-          <SavedCoins/>
+          <SavedCoins />
         </div>
       </div>
     </div>
