@@ -1,83 +1,88 @@
 input:-webkit-autofill {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgb(161, 161, 161) !important;
-  }
-  
-  .sign_up_page_container {
-    width: 100%;
-    min-height: 600px;
-    padding: 1rem;
-    padding-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .sign_up_page_h1 {
-    font-weight: bold;
-    font-size: 2rem;
-    color: var(--color-text-primary);
-  }
-  
-  .input_container label {
-    color: var(--color-text-primary);
-  }
-  
-  .input_container {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .input_container_email {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    position: relative;
-    color: var(--color-text-primary);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    border-radius: 50px;
-  }
-  
-  .input_container_email input {
-    height: 50px;
-    width: 250px;
-    border: none;
-    margin-left: 0.5rem;
-    padding: 1rem;
-    background-color: transparent;
-    color: var(--color-text-primary);
-  }
-  
-  .input_container_email input:focus {
-    background-color: transparent;
-    border: none;
-    outline: none;
-  }
-  
-  .input_container_email .ai_icon {
-    font-size: 20px;
-    margin: auto;
-    margin-left: 1rem;
-  }
-  
-  .sign_up_button {
-    width: 100%;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.7rem;
-    border-radius: 50px;
-    background-color: var(--color-button);
-    color: var(--color-secondary);
-  }
-  
-  .p_signup{
-    color: var(--color-text-primary);
-  }
-  
-  .p_signup_linkTag {
-    margin-left: 0.875rem;
-  }
-  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(161, 161, 161) !important;
+}
+
+.sign_up_page_container {
+  width: 100%;
+  min-height: 600px;
+  padding: 1rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign_up_page_h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--color-text-primary);
+}
+
+.sign_up_page_error_tag {
+  background-color: red;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.input_container label {
+  color: var(--color-text-primary);
+}
+
+.input_container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input_container_email {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  position: relative;
+  color: var(--color-text-primary);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 50px;
+}
+
+.input_container_email input {
+  height: 50px;
+  width: 250px;
+  border: none;
+  margin-left: 0.5rem;
+  padding: 1rem;
+  background-color: transparent;
+  color: var(--color-text-primary);
+}
+
+.input_container_email input:focus {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.input_container_email .ai_icon {
+  font-size: 20px;
+  margin: auto;
+  margin-left: 1rem;
+}
+
+.sign_up_button {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 50px;
+  background-color: var(--color-button);
+  color: var(--color-secondary);
+}
+
+.p_signup {
+  color: var(--color-text-primary);
+}
+
+.p_signup_linkTag {
+  margin-left: 0.875rem;
+}
