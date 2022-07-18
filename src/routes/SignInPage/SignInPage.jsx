@@ -1,26 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillLock, AiOutlineMail } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./SignInPage.module.css";
+import { UserAuth } from "../../context/AuthContext";
 
 const SignInPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const { signIn } = UserAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signIn(email, password);
+      navigate("/account");
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
+  };
+
   return (
     <div>
       <div className={styles.sign_in_page_container}>
         <h1 className={styles.sign_in_page_h1}>Sign In</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className={styles.input_container}>
             <label>Email</label>
             <div className={styles.input_container_email}>
               <AiOutlineMail className={styles.ai_icon} />
-              <input type="email" />
+              <input onChange={(e) => setEmail(e.target.value)} type="email" />
             </div>
           </div>
           <div className={styles.input_container}>
             <label>Password</label>
             <div className={styles.input_container_email}>
               <AiFillLock className={styles.ai_icon} />
-              <input type="password" />
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+              />
             </div>
           </div>
           <button className={styles.signin_button}>Sign In</button>

@@ -1,14 +1,27 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import styles from "./Navbar.module.css";
+import { UserAuth } from "../../context/AuthContext";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
+  const { user, logout } = UserAuth();
+  const navigate = useNavigate();
+
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await logout();
+      navigate("/");
+    } catch (e) {
+      console.log(e.message);
+    }
   };
 
   return (
@@ -19,14 +32,23 @@ const Navbar = () => {
       <div className={styles.themetoggle_container}>
         <ThemeToggle />
       </div>
-      <div className={styles.sign_container}>
-        <Link to="/signin">
-          <div className={styles.signIn_container}>Sign In</div>
-        </Link>
-        <Link to="/signup">
-          <div className={styles.signUp_container}>Sign Up</div>
-        </Link>
-      </div>
+
+      {user?.email ? (
+        <div>
+          <Link to="/account">Account</Link>
+          <button onClick={handleSignOut}>Sign Out</button>
+        </div>
+      ) : (
+        <div className={styles.sign_container}>
+          <Link to="/signin">
+            <div className={styles.signIn_container}>Sign In</div>
+          </Link>
+          <Link to="/signup">
+            <div className={styles.signUp_container}>Sign Up</div>
+          </Link>
+        </div>
+      )}
+
       <div onClick={handleNav} className={styles.aiOutlineMenu}>
         {nav ? <AiOutlineClose size={23} /> : <AiOutlineMenu size={23} />}
       </div>

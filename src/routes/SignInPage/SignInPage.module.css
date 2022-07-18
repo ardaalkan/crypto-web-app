@@ -71,6 +71,8 @@ input:-webkit-autofill {
   border-radius: 50px;
   background-color: var(--color-button);
   color: var(--color-secondary);
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .p_sign_in {
