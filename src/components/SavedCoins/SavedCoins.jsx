@@ -2,9 +2,20 @@ import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import styles from "./SavedCoins.module.css";
+import { doc, onSnapshot } from "firebase/firestore";
+import { db } from "../../firebase";
+import { UserAuth } from "../../context/AuthContext";
+import { useEffect } from "react";
 
 const SavedCoins = () => {
   const [coins, setCoins] = useState([]);
+  const { user } = UserAuth();
+
+  useEffect(() => {
+    onSnapshot(doc(db, "users", `${user.email}`), (doc) => {
+      setCoins(doc.data()?.watchList);
+    });
+  }, [user?.email]);
 
   return (
     <div>
@@ -37,7 +48,7 @@ const SavedCoins = () => {
                       <div>
                         <p className={styles.saved_coin_name}>{coin?.name}</p>
                         <p className={styles.saved_coin_symbol}>
-                          {coin?.symbol}
+                          {coin?.symbol.toUpperCase()}
                         </p>
                       </div>
                     </div>
